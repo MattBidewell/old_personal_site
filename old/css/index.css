@@ -21,12 +21,12 @@ body {
 
 .header {
     text-align: right;
-    padding:25px 25px 0;
+    /* padding:25px 0; */
 }
 
 .header a {
     text-decoration: none;
-    padding: 0 25px;
+    /* padding: 0 25px; */
 }
 
 i {
