@@ -20,7 +20,7 @@ export default {
 
 <style>
 
-  /* @import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap'); */
+  @import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
 
   body {
     width: 100%;
@@ -28,8 +28,7 @@ export default {
     background: #1b1b1b;
     color: white;
     text-align:left;
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    /* font-family: 'Roboto Mono', monospace; */
+    font-family: 'Roboto Mono', monospace;
     overflow-x: hidden;
   }
 
