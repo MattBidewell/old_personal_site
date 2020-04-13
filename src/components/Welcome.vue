@@ -2,7 +2,7 @@
   <div class="welcome">
     <h1 class="par">Hello</h1>
     <p class="par">I'm Matt, a software engineer based in London, UK.</p>
-    <p class="par">Currently a engineer at A Million Ads</p>
+    <p class="par">Currently engineering at A Million Ads</p>
   </div>
 </template>
 
@@ -30,18 +30,18 @@
           const element = cryptoElements[i];
           const originalText = element.textContent;
           const cryptoText = getCryptoWord(originalText.length);
-          element.textContent = cryptoText;
+          element.innerHTML = cryptoText;
           setOrignal(element,originalText);
       }
 
 
       function getCryptoWord(length) {
           const word = [];
-            while(length > 0) {
-                const random = Math.floor(Math.random() * Math.floor(chars.length));
-                word.push(chars[random]);
-                length = length - 1;
-            }
+          while(length > 0) {
+              const random = Math.floor(Math.random() * Math.floor(chars.length));
+              word.push(chars[random]);
+              length = length - 1;
+          }
           return word.join("");
       }
 
