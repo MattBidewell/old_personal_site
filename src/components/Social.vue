@@ -1,5 +1,8 @@
 <template>
     <nav class="header">
+        <a href="https://www.linkedin.com/in/matt-bidewell-a4578790/">
+            <i class="fab fa-linkedin"></i>
+        </a>
         <a href="https://github.com/MattBidewell">
             <i class="fab fa-github"></i>
         </a>
@@ -14,7 +17,7 @@
 
 <script>
 export default {
-  name: 'Nav'
+  name: 'Social'
 }
 </script>
 <style scoped>
