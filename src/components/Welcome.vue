@@ -2,7 +2,7 @@
   <div class="welcome">
     <h1 class="par">Hello</h1>
     <p class="par">I'm Matt, a software engineer based in London, UK.</p>
-    <p class="par">Currently engineering at A Million Ads</p>
+    <p class="par">Currently engineering at A Million Ads.</p>
   </div>
 </template>
 
