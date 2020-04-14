@@ -1,18 +1,19 @@
 <template>
   <div id="app">
-    <Nav/>
+    <Social/>
     <Welcome/>
+    <br>
   </div>
 </template>
 
 <script>
 import Welcome from './components/Welcome';
-import Nav from "./components/Nav";
+import Social from "./components/Social";
 
 export default {
   name: 'App',
   components: {
-    Nav,
+    Social,
     Welcome
   }
 }
