@@ -6,7 +6,7 @@
         <a href="https://github.com/MattBidewell">
             <i class="fab fa-github"></i>
         </a>
-        <a href="https://twitter.com/Matt_Bidewell_">
+        <a href="https://twitter.com/MattyDev_">
             <i class="fab fa-twitter"></i>
         </a>
         <a href="https://dev.to/mattbidewell">
