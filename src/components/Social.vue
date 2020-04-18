@@ -35,7 +35,7 @@ export default {
     i {
         text-decoration: none;
         font-size: 25px;
-        color: aliceblue;
+        color:#777;
     }
 
     i::after {
