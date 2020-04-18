@@ -1,8 +1,8 @@
 <template>
   <div id="app" v-bind:class="theme">
     <ul class="theme-switch">
-        <i class="fas fa-sun" v-on:click="switchTheme"></i>
-        <i class="fas fa-moon hidden"></i>
+        <i class="fas fa-sun" v-on:click="switchTheme" v-bind:class="lightIcon"></i>
+        <i class="fas fa-moon" v-on:click="switchTheme" v-bind:class="darkIcon"></i>
     </ul>
     <Social/>
     <Welcome/>
@@ -20,8 +20,10 @@ export default {
     return {
       theme: {
         dark:true,
-        light:false 
-      }
+        light:false
+      },
+      lightIcon:false,
+      darkIcon:true
     }
   },
   components: {
@@ -31,11 +33,15 @@ export default {
   methods: {
     switchTheme: function() {
       if(this.theme.dark){
-        this.theme.light=true;
         this.theme.dark=false;
+        this.theme.light=true;
+        this.darkIcon=true;
+        this.lightIcon=false;
       } else {
-        this.theme.light=false;
         this.theme.dark=true;
+        this.theme.light=false;
+        this.darkIcon=false;
+        this.lightIcon=true;
       }
     }
   }
@@ -113,8 +119,8 @@ export default {
       color:white;
   }
 
-  .hidden {
-      display: none;
+  .lightIcon, .darkIcon {
+    display:none;
   }
 
 </style>
