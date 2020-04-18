@@ -1,8 +1,8 @@
 <template>
   <div class="welcome">
-    <h1 class="par">Hello</h1>
-    <p class="par">I'm Matt, a software engineer based in London, UK.</p>
-    <p class="par">Currently engineering at A Million Ads.</p>
+    <h1 class="crypto">Hello</h1>
+    <p class="crypto">I'm Matt, a software engineer based in London, UK.</p>
+    <p class="crypto">Currently engineering at A Million Ads.</p>
   </div>
 </template>
 
@@ -13,7 +13,7 @@
 
       const chars = "ABCDEFGHIJKLMNOPQRSTUVWYZXabcdefghijklmnopqrstuvwyzx1234567890-=!£$%^&*()_+`¬_+[];'#,./<>?:@~{}Ü¥";
 
-      const parentElements = this.$el.getElementsByClassName("par");
+      const parentElements = this.$el.getElementsByClassName("crypto");
 
       for(const element of parentElements) {
           const words = element.innerHTML.split(" ");
@@ -52,7 +52,7 @@
         const time = Math.random() * Math.floor(3000);
         setTimeout((element, originalText) => {
             element.innerHTML = originalText;
-            element.style.color = color;
+            element.className = "crypto-post";
         }, time, element, originalText);  
       };
 
@@ -62,32 +62,8 @@
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-  
-  :root {
-    --font-color: #d6d6d6;
-    --font-color-dark:#16191b;
-    --background-color: #16191b;
-    --background-color-light: #e7e7e7;
-  }
-
-  .dark {
-    --bg: var(--background-color);
-    --font: var(--font-color);
-  }
-
-  .light {
-    --bg: var(--background-color-light);
-    --font: var(--font-color-dark);
-  }
-
-  .welcome {
-    margin-left:25%;
-  }
-
-  .par {
-    color: #444444;
-  }
+<style>
+ 
 
     
 </style>
