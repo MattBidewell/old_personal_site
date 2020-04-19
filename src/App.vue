@@ -1,10 +1,12 @@
 <template>
   <div id="app" v-bind:class="theme">
-    <ul class="theme-switch">
-        <i class="fas fa-sun" v-on:click="switchTheme" v-bind:class="lightIcon"></i>
-        <i class="fas fa-moon" v-on:click="switchTheme" v-bind:class="darkIcon"></i>
-    </ul>
-    <Social/>
+    <div id="header-wrapper">
+      <ul class="theme-switch flex-child">
+          <i class="fas fa-sun" v-on:click="switchTheme" v-bind:class="darkMode ? '': 'hidden'"></i>
+          <i class="fas fa-moon" v-on:click="switchTheme" v-bind:class="darkMode ? 'hidden': ''"></i>
+      </ul>
+      <Social class="flex-child"/>
+    </div>
     <Welcome/>
     <br>
   </div>
@@ -22,8 +24,7 @@ export default {
         dark:true,
         light:false
       },
-      lightIcon:false,
-      darkIcon:true
+      darkMode: true
     }
   },
   components: {
@@ -35,13 +36,11 @@ export default {
       if(this.theme.dark){
         this.theme.dark=false;
         this.theme.light=true;
-        this.darkIcon=true;
-        this.lightIcon=false;
+        this.darkMode=false;
       } else {
         this.theme.dark=true;
         this.theme.light=false;
-        this.darkIcon=false;
-        this.lightIcon=true;
+        this.darkMode=true;
       }
     }
   }
@@ -110,17 +109,28 @@ export default {
   }
 
   .theme-switch {
-      padding:1rem;
-      display:inline;
+      display: flex;
+      float: left;
+      top:1rem;
+      /* display:inline; */
+      /* position: relative; */
+  }
+
+  .flex-child {
+    flex:1;
   }
 
   .theme-switch i {
       font-size: 25px;
       color:white;
   }
+  .theme-switch .fa-moon {
+    color:#777;
+  }
 
-  .lightIcon, .darkIcon {
+  .hidden {
     display:none;
   }
+
 
 </style>
