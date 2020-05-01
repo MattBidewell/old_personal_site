@@ -1,16 +1,16 @@
 <template>
     <nav class="header">
         <a href="https://www.linkedin.com/in/matt-bidewell-a4578790/">
-            <i class="fab fa-linkedin"></i>
+            LinkedIn<!-- <i class="fab fa-linkedin"></i> -->
         </a>
         <a href="https://github.com/MattBidewell">
-            <i class="fab fa-github"></i>
+            Github<!-- <i class="fab fa-github"></i> -->
         </a>
         <a href="https://twitter.com/MattyDev_">
-            <i class="fab fa-twitter"></i>
+            Twitter<!-- <i class="fab fa-twitter"></i> -->
         </a>
         <a href="https://dev.to/mattbidewell">
-            <i class="fab fa-dev"></i>
+            Dev<!-- <i class="fab fa-dev"></i> -->
         </a>
     </nav>
 </template>
@@ -35,16 +35,32 @@ export default {
     i {
         text-decoration: none;
         font-size: 25px;
-        color:#777;
+        color:var(--font-link);
     }
 
     i::after {
         content: none;
     }
+    
+    a:link, a:visited, a:active{
+        color:var(--font-link);
+    }
 
-    .dev {
-        background:white;
-        color:black;
+    a:hover {
+        text-decoration:underline;
+        color:var(--link-hover)
+    }
+
+    @media only screen and (min-width: 600px) {
+        .header {
+            text-align: center;
+            padding:0;
+        }
+        
+        .header a {
+            padding: 0 0;
+        }
     }
     
+
 </style>
