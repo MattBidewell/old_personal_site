@@ -1,6 +1,6 @@
 <template>
   <div id="app" v-bind:class="theme">
-    <div id="header-wrapper">
+    <div>
       <ul class="theme-switch flex-child">
           <i class="fas fa-sun" v-on:click="switchTheme" v-bind:class="darkMode ? '': 'hidden'"></i>
           <i class="fas fa-moon" v-on:click="switchTheme" v-bind:class="darkMode ? 'hidden': ''"></i>
@@ -49,11 +49,18 @@ export default {
 
 <style>
 
-  @import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
 
   :root {
     --font-color: #d6d6d6;
     --font-color-dark:#16191b;
+    
+    --font-link: #6f6f6f;
+    --font-link-dark: #b9b9b9;
+
+    --font-link-hover: #a2a2a2;
+    --font-link-hover-dark:#16191b;
+
     --background-color: #16191b;
     --background-color-light: #e7e7e7;
   }
@@ -61,11 +68,16 @@ export default {
   .dark {
     --bg: var(--background-color);
     --font: var(--font-color);
+    --link: var(--font-link);
+    --link-hover: var(--font-link-hover);
   }
 
   .light {
     --bg: var(--background-color-light);
     --font: var(--font-color-dark);
+    --link: var(--font-link-dark);
+    --link-hover: var(--font-link-hover-dark);
+    /* --font-link: var(); */
   }
 
   html,body {
@@ -76,24 +88,17 @@ export default {
   body {
     text-align:left;
     font-family: 'Roboto Mono', monospace;
-    /* background: var(--bg); */
-    /* overflow-x: hidden; */
+    letter-spacing: 1px;
   }
 
   #app {
     
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: #030303;
+    color: var(--font);
     min-width: 100%;
     min-height: 100%;
     background: var(--bg);
-  }
-
-  .wrapper {
-    padding-top:2%;
-    margin-left:20%;
-    margin-right:20%;
   }
 
   .welcome {
@@ -111,9 +116,7 @@ export default {
   .theme-switch {
       display: flex;
       float: left;
-      top:1rem;
-      /* display:inline; */
-      /* position: relative; */
+      cursor: pointer;
   }
 
   .flex-child {
@@ -121,8 +124,7 @@ export default {
   }
 
   .theme-switch i {
-      font-size: 25px;
-      color:white;
+      font-size: 20px;
   }
   .theme-switch .fa-moon {
     color:#777;
@@ -132,5 +134,10 @@ export default {
     display:none;
   }
 
+  @media only screen and (min-width: 600px) {
+    .welcome {
+      margin-left:5rem;
+    }
+  }
 
 </style>
