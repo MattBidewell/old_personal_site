@@ -51,10 +51,10 @@ export default {
         color:var(--link-hover)
     }
 
-    @media only screen and (min-width: 600px) {
+    @media only screen and (max-width: 600px) {
         .header {
             text-align: center;
-            padding:0;
+            padding:15px 15px;
         }
         
         .header a {

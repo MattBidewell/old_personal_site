@@ -1,6 +1,6 @@
 <template>
   <div id="app" v-bind:class="theme">
-    <div>
+    <div id="top-bar">
       <ul class="theme-switch flex-child">
           <i class="fas fa-sun" v-on:click="switchTheme" v-bind:class="darkMode ? '': 'hidden'"></i>
           <i class="fas fa-moon" v-on:click="switchTheme" v-bind:class="darkMode ? 'hidden': ''"></i>
@@ -134,10 +134,19 @@ export default {
     display:none;
   }
 
-  @media only screen and (min-width: 600px) {
-    .welcome {
-      margin-left:5rem;
-    }
+  @media only screen and (max-width: 600px) {
+      .welcome {
+        padding-top:5rem;
+        margin-left:1.5rem;
+      }
+
+      #top-bar {
+        background: var(--bg);
+        position: fixed;
+        left:0;
+        right:0;
+        width:100%;
+      }
   }
 
 </style>
