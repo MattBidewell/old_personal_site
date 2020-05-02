@@ -6,11 +6,8 @@
         <a href="https://github.com/MattBidewell">
             Github<!-- <i class="fab fa-github"></i> -->
         </a>
-        <a href="https://twitter.com/MattyDev_">
+        <a href="https://twitter.com/MatthewDev_">
             Twitter<!-- <i class="fab fa-twitter"></i> -->
-        </a>
-        <a href="https://dev.to/mattbidewell">
-            Dev<!-- <i class="fab fa-dev"></i> -->
         </a>
     </nav>
 </template>
