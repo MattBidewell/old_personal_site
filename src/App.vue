@@ -7,14 +7,21 @@
       </ul>
       <Social class="flex-child"/>
     </div>
-    <Welcome/>
-    <br>
+    <section id="content">
+      <Welcome/>
+      <br>
+      <ProjectList id="project-list"/>
+      <br>
+      <BlogList id="blog-list"/>
+    </section>
   </div>
 </template>
 
 <script>
-import Welcome from './components/Welcome';
+import Welcome from "./components/Welcome";
 import Social from "./components/Social";
+import BlogList from "./components/BlogList";
+import ProjectList from "./components/ProjectList";
 
 export default {
   name: 'App',
@@ -28,6 +35,8 @@ export default {
     }
   },
   components: {
+    BlogList,
+    ProjectList,
     Social,
     Welcome
   },
@@ -101,7 +110,7 @@ export default {
     background: var(--bg);
   }
 
-  .welcome {
+  #content {
     margin-left:10rem;
   }
 
@@ -134,8 +143,14 @@ export default {
     display:none;
   }
 
+  #blog-list, #project-list, #top-bar {
+      animation: 3s fadeIn ease-in forwards;
+      animation-delay:3s;
+      opacity: 0;
+  }
+
   @media only screen and (max-width: 600px) {
-      .welcome {
+      #content {
         padding-top:5rem;
         margin-left:1.5rem;
       }
@@ -147,6 +162,11 @@ export default {
         right:0;
         width:100%;
       }
+  }
+
+  @keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
   }
 
 </style>
