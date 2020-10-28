@@ -154,6 +154,7 @@ export default {
       #content {
         padding-top:5rem;
         margin-left:1.5rem;
+        margin-right:1.5rem;
       }
 
       #top-bar {
