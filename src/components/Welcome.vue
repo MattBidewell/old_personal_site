@@ -3,7 +3,7 @@
     <h1 class="crypto">I'm Matthew Bidewell ICON</h1>
     <p class= "crypto">I'm a Software engineer 👨‍💻 with yearsHOLD years of experience in creating well crafted SAAS solutions. I'm part of the team over at A_Million_Ads where I plan, build and reflect.</p> <br/>
     <p class= "crypto">When I'm not programming, my distractions include cinematography🎥, cyber security and browsing record stores🎧.</p> <br/>
-    <p class= "crypto">You can find me on Twitter, scrutinise my code at Github or get in touch via E-mail.</p><br/>
+    <p class= "crypto">You can find me on Twitter, scrutinise my code at Github or get in touch via LinkedIn.</p><br/>
   </div>
 </template>
 
@@ -42,8 +42,14 @@
                   return `<a href="https://twitter.com/MatthewDev_">${text}</a>`
               } else if(word === "Github") {
                   const letters = word.split("");
+                  console.log(letters);
                   const text = letters.map((letter)=>`<span class="cp">${letter}</span>`).join("");
-                  return `<a href="https://github.com/MattBidewell">${text}</a>` 
+                  return `<a href="https://github.com/MattBidewell">${text}</a>`;
+              } else if(word === "LinkedIn."){
+                const letters = word.split("");
+                  console.log(letters);
+                  const text = letters.map((letter)=>`<span class="cp">${letter}</span>`).join("");
+                  return `<a href="https://www.linkedin.com/in/matt-bidewell-a4578790/">${text}</a>`;
               } else {
                   const letters = word.split("");
                   return letters.map((letter)=>`<span class="cp">${letter}</span>`).join("");
