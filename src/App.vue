@@ -10,9 +10,9 @@
     <section id="content">
       <Welcome/>
       <br>
-      <ProjectList id="project-list"/>
+      <!-- <ProjectList id="project-list"/>
       <br>
-      <BlogList id="blog-list"/>
+      <BlogList id="blog-list"/> -->
     </section>
   </div>
 </template>
@@ -97,7 +97,7 @@ export default {
   body {
     text-align:left;
     font-family: 'Roboto Mono', monospace;
-    letter-spacing: 1px;
+    letter-spacing: 0.25px;
   }
 
   #app {
@@ -111,7 +111,8 @@ export default {
   }
 
   #content {
-    margin-left:10rem;
+    margin-left:15rem;
+    margin-right:15rem;
   }
 
   .crypto{
