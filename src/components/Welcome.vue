@@ -48,7 +48,6 @@
                   const letters = word.split("");
                   return letters.map((letter)=>`<span class="cp">${letter}</span>`).join("");
               }
-
           });
           element.innerHTML = newWords.join(" ");
       };
