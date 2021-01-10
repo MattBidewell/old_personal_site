@@ -5,23 +5,17 @@
           <i class="fas fa-sun" v-on:click="switchTheme" v-bind:class="darkMode ? '': 'hidden'"></i>
           <i class="fas fa-moon" v-on:click="switchTheme" v-bind:class="darkMode ? 'hidden': ''"></i>
       </ul>
-      <Social class="flex-child"/>
+      <!-- <Social class="flex-child"/> -->
     </div>
-    <section id="content">
-      <Welcome/>
+    <section>
+      <Content/>
       <br>
-      <!-- <ProjectList id="project-list"/>
-      <br>
-      <BlogList id="blog-list"/> -->
     </section>
   </div>
 </template>
 
 <script>
-import Welcome from "./components/Welcome";
-import Social from "./components/Social";
-import BlogList from "./components/BlogList";
-import ProjectList from "./components/ProjectList";
+import Content from "./components/Content";
 
 export default {
   name: 'App',
@@ -35,10 +29,7 @@ export default {
     }
   },
   components: {
-    BlogList,
-    ProjectList,
-    Social,
-    Welcome
+    Content
   },
   methods: {
     switchTheme: function() {
@@ -110,11 +101,6 @@ export default {
     background: var(--bg);
   }
 
-  #content {
-    margin-left:15rem;
-    margin-right:15rem;
-  }
-
   .crypto{
     color: #444444;
   }
@@ -144,12 +130,6 @@ export default {
     display:none;
   }
 
-  #blog-list, #project-list, #top-bar {
-      animation: 3s fadeIn ease-in forwards;
-      animation-delay:3s;
-      opacity: 0;
-  }
-
   @media only screen and (max-width: 600px) {
       #content {
         padding-top:5rem;
@@ -164,11 +144,6 @@ export default {
         right:0;
         width:100%;
       }
-  }
-
-  @keyframes fadeIn {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
   }
 
 </style>
