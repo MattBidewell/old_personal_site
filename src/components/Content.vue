@@ -89,7 +89,7 @@
               } else if(word === "MediumLink"){
                   const letters = "Medium".split("");
                   const text = letters.map((letter)=>`<span class="cp">${letter}</span>`).join("");
-                  return `<a class="base_link" href="https://medium.com/@matthewbidewell">${text}</a>`;
+                  return `<a class="base_link" href="https://mattbidewell.medium.com/">${text}</a>`;
               } else {
                   const letters = word.split("");
                   return letters.map((letter)=>`<span class="cp">${letter}</span>`).join("");
