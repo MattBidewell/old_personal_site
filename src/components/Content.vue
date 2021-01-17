@@ -12,14 +12,22 @@
         <p class= "crypto">I'm a Software engineer with yearsHOLD years of experience in creating well crafted SAAS solutions using AWS. I'm part of the team over at A_Million_Ads where I help build highly scalable, low latancy services. 🐝</p> <br/>
         <p class= "crypto">When I'm not programming, my distractions include drone cinematography 🎥, cyber security and browsing record stores 🎧.</p> <br/>
         <p class= "crypto">You can find me on Twitter, scrutinise my code at Github or get in touch via LinkedIn.</p><br/>
+        <br/>
         <section id="blog">
             <h2 class="crypto">Blog</h2>
             <div class = "post">
-                <a class="post_link" href="https://medium.com/@matthewbidewell/rust-and-its-ownership-model-effc41e3951">
+                <a class="post_link" href="https://levelup.gitconnected.com/rust-and-its-ownership-model-effc41e3951">
                     <h3 class="crypto">Rust and ownership</h3>
                     <p class="crypto">A high level introduction to Rust and its owership rules. The post talks about heap, stack and ownership.</p>
                 </a>
             </div>
+            <div class = "post">
+                <a class="post_link" href="https://mattbidewell.medium.com/rust-and-its-referencing-and-borrowing-b2e8aefc12d8">
+                    <h3 class="crypto">Rust and referencing</h3>
+                    <p class="crypto">A look into how rust handles referencing variables as they change scope.</p>
+                </a>
+            </div>
+            <!-- <p class="crypto">More...</p> -->
         </section>
     </section>
   </div>
@@ -51,8 +59,8 @@
                   const text = letters.map((letter)=>`<span class="cp">${letter}</span>`).join("");
                   return text;
               } else if(word === "A_Million_Ads") {
-                  const letters = word.split("_");
-                  const text = letters.map((letter)=>`<span class="cp">${letter}</span>`).join(" "); // space becuase multiple words
+                  const letters = "A Million Ads".split("");
+                  const text =  `<span class="cp">A Million Ads</span>`; // space becuase multiple words
                   return `<a id="amillionads" href="https://www.amillionads.com/">${text}</a>`;
               } else if(word === "Twitter,") {
                   const letters = word.split("");
@@ -82,11 +90,7 @@
                   const letters = "Medium".split("");
                   const text = letters.map((letter)=>`<span class="cp">${letter}</span>`).join("");
                   return `<a class="base_link" href="https://medium.com/@matthewbidewell">${text}</a>`;
-              } else if(word === "RustOwnershipLink") {
-                  const letters = "Read more..".split("");
-                  const text = letters.map((letter)=>`<span class="cp">${letter}</span>`).join("");
-                  return `<a class="base_link" href="https://medium.com/@matthewbidewell/rust-and-its-ownership-model-effc41e3951">${text}</a>`;
-              }else {
+              } else {
                   const letters = word.split("");
                   return letters.map((letter)=>`<span class="cp">${letter}</span>`).join("");
               }
@@ -141,6 +145,49 @@
     #content {
         margin-left:15rem;
         margin-right:15rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+        #content {
+            padding-top:5rem;
+            margin-left:1.5rem;
+            margin-right:1.5rem;
+        }
+
+        #header {
+            background: var(--bg);
+            position: fixed;
+            left:0;
+            right:0;
+            width:100%;
+            padding: 0.5rem;
+
+        }
+
+        #header p a {
+            padding: 0 10px;
+        }
+    }
+
+    @media only screen and (min-width:600px) and (max-width: 1200px) {
+        #content {
+            padding-top:5rem;
+            margin-left:7.5rem;
+            margin-right:7.5rem;
+        }
+
+        #header {
+            background: var(--bg);
+            position: fixed;
+            left:0;
+            right:0;
+            width:100%;
+            padding: 0.5rem;
+        }
+
+        #header p a {
+            padding: 0 10px;
+        }
     }
 
     #header {
@@ -204,9 +251,28 @@
         margin-left: 30px;
         padding-left: 10px;
         border-left: 2px solid var(--font-link);
+        padding-bottom: 5px;
+        position: relative;
     }
 
     .post:hover {
-        border-bottom: 2px solid var(--font-link);
+        /* border-bottom: 2px solid var(--font-link); */
+    }
+
+    .post:after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 1px;
+        display: block;
+        margin-top: 5px;
+        right:0;
+        background: #fff;
+        transition: width 1s ease;
+    }
+
+    .post:hover:after {
+        width: 100%;
+        left:0;
     }
 </style>
