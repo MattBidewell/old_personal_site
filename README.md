@@ -1,7 +1,3 @@
 # personal_site
 
-
-## Todo:
-
-Start writting blog posts.
-Tidy up.
+A nasty implementation to get the crypto style letter change. Dont judge!
