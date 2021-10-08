@@ -1,3 +1,4 @@
 # personal_site
 
-A nasty implementation to get the crypto style letter change. Dont judge!
+Static site for my [matty.dev](https://matty.dev)
+
