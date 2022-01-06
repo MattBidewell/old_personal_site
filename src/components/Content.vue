@@ -9,7 +9,7 @@
     <section id="content">
         <h1 class="crypto">I'm Matthew Bidewell ICON</h1>
         <br/>
-        <p class= "crypto">I'm a Software engineer with yearsHOLD years of experience in creating well crafted SAAS solutions using AWS. I'm a Engineer over at Government Digital Services where I help with Digital Identification. 🐝</p> <br/>
+        <p class= "crypto">I'm a Software engineer with yearsHOLD years of experience in creating well crafted SAAS solutions using AWS. I'm a Engineer over at Government_Digital_Services where I help with Digital Identification. 🐝</p> <br/>
         <p class= "crypto">When I'm not programming, my distractions include drone cinematography 🎥, cyber security and browsing record stores 🎧.</p> <br/>
         <p class= "crypto">You can find me on Twitter, scrutinise my code at Github or get in touch via LinkedIn.</p><br/>
         <br/>
@@ -58,7 +58,7 @@
                   const letters = word.split("");
                   const text = letters.map((letter)=>`<span class="cp">${letter}</span>`).join("");
                   return text;
-              } else if(word === "Government Digital Services") {
+              } else if(word === "Government_Digital_Services") {
                   const letters = "Government Digital Services".split("");
                   const text =  `<span class="cp">Government Digital Services</span>`; // space becuase multiple words
                   return `<a id="gds" href="https://www.gov.uk/government/organisations/government-digital-service">${text}</a>`;
