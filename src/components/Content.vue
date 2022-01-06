@@ -9,7 +9,7 @@
     <section id="content">
         <h1 class="crypto">I'm Matthew Bidewell ICON</h1>
         <br/>
-        <p class= "crypto">I'm a Software engineer with yearsHOLD years of experience in creating well crafted SAAS solutions using AWS. I'm part of the team over at A_Million_Ads where I help build highly scalable, low latency services. 🐝</p> <br/>
+        <p class= "crypto">I'm a Software engineer with yearsHOLD years of experience in creating well crafted SAAS solutions using AWS. I'm part of the team over at GDS where I help with Digitial Identification. 🐝</p> <br/>
         <p class= "crypto">When I'm not programming, my distractions include drone cinematography 🎥, cyber security and browsing record stores 🎧.</p> <br/>
         <p class= "crypto">You can find me on Twitter, scrutinise my code at Github or get in touch via LinkedIn.</p><br/>
         <br/>
@@ -58,10 +58,10 @@
                   const letters = word.split("");
                   const text = letters.map((letter)=>`<span class="cp">${letter}</span>`).join("");
                   return text;
-              } else if(word === "A_Million_Ads") {
-                  const letters = "A Million Ads".split("");
-                  const text =  `<span class="cp">A Million Ads</span>`; // space becuase multiple words
-                  return `<a id="amillionads" href="https://www.amillionads.com/">${text}</a>`;
+              } else if(word === "GDS") {
+                  const letters = "GDS".split("");
+                  const text =  `<span class="cp">GDS</span>`; // space becuase multiple words
+                  return `<a id="GDS" href="https://www.gov.uk/government/organisations/government-digital-service">${text}</a>`;
               } else if(word === "Twitter,") {
                   const letters = word.split("");
                   const text = letters.map((letter)=>`<span class="cp">${letter}</span>`).join("");
