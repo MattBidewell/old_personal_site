@@ -9,7 +9,7 @@
     <section id="content">
         <h1 class="crypto">I'm Matthew Bidewell ICON</h1>
         <br/>
-        <p class= "crypto">I'm a Software engineer with yearsHOLD years of experience in creating well crafted SAAS solutions using AWS. I'm part of the team over at A_Million_Ads where I help build highly scalable, low latency services. 🐝</p> <br/>
+        <p class= "crypto">I'm an Software engineer with yearsHOLD years of experience in creating well crafted SAAS solutions using AWS. I'm part of the team over at A_Million_Ads where I help build highly scalable, low latency services. 🐝</p> <br/>
         <p class= "crypto">When I'm not programming, my distractions include drone cinematography 🎥, cyber security and browsing record stores 🎧.</p> <br/>
         <p class= "crypto">You can find me on Twitter, scrutinise my code at Github or get in touch via LinkedIn.</p><br/>
         <br/>
