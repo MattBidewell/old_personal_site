@@ -65,7 +65,7 @@
               } else if(word === "Twitter,") {
                   const letters = word.split("");
                   const text = letters.map((letter)=>`<span class="cp">${letter}</span>`).join("");
-                  return `<a id="twitter" href="https://twitter.com/MatthewDev_">${text}</a>`
+                  return `<a id="twitter" href="https://twitter.com/mattbidewell">${text}</a>`
               } else if(word === "Github") {
                   const letters = word.split("");
                   const text = letters.map((letter)=>`<span class="cp">${letter}</span>`).join("");
@@ -99,7 +99,7 @@
       };
 
       const cryptoElements = this.$el.getElementsByClassName("cp");
-      
+
       for(let i = 0; i < cryptoElements.length; i++) {
           const element = cryptoElements[i];
           const originalText = element.textContent;
@@ -123,7 +123,7 @@
         setTimeout((element, originalText) => {
             element.innerHTML = originalText;
             element.className = "crypto-post";
-        }, time, element, originalText);  
+        }, time, element, originalText);
       };
 
     }
@@ -137,7 +137,7 @@
     h1 {
         font-size: 1.3em;
     }
-    
+
     h2 {
         font-size: 1.2em;
     }
@@ -217,7 +217,7 @@
     #gds *, #gds *:hover {
         color: #2a9fe2;
     }
-    
+
     #gds:link, #linkedin:link, #twitter:link, #github:link {
         text-decoration: none;
     }
