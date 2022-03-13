@@ -85,7 +85,7 @@
               } else if(word === "TwitterLink"){
                   const letters = "Twitter".split("");
                   const text = letters.map((letter)=>`<span class="cp">${letter}</span>`).join("");
-                  return `<a class="base_link" href="https://twitter.com/MatthewDev_">${text}</a>`;
+                  return `<a class="base_link" href="https://twitter.com/mattbidewell">${text}</a>`;
               } else if(word === "MediumLink"){
                   const letters = "Medium".split("");
                   const text = letters.map((letter)=>`<span class="cp">${letter}</span>`).join("");
